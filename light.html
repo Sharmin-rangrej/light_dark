@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .icon
+        {
+            height: 50px;
+            width: 50px;
+            cursor:pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .active
+        {
+            border:2px solid blue;
+        }
+        .para
+        {
+            font-size: 25px;
+        }
+        .theme-dark
+        {
+          background-color: black;
+          color: white;
+        }
+        .theme-light
+        {
+          background-color: blue;
+          color: white;
+        }
+       
+        </style>
+</head>
+<body id="body">
+    <div>
+        <img src="moon.png" class="icon" id="img-dark" onclick="dark()" />
+        <img src="idea.png" class="icon" id="img-light" onclick="light()" />
+        <h1>Dark & Light Theme</h1>
+        <p class="para">
+            Let's study the dark and light thene from javascript. This is very interesting topic to learn 
+            and simple as well but sometimes you may find it very hard as 
+            there are multiple functions used buit still lets try and make 
+            it very easy for everyone.
+        </p>
+        </div>
+        <script>
+            function dark()
+            {
+              const imgdark = document.getElementById("img-dark");
+              imgdark.classList.add("active");
+
+              const imglight=document.getElementById("img-light");
+              imglight.classList.remove("active");
+              
+              const bodyelement = document.getElementById("body");
+              bodyelement.className = "theme-dark";
+            }
+            function light()
+            {
+              const imglight=document.getElementById("img-light");
+              imglight.classList.add("active")
+
+              const imgdark = document.getElementById("img-dark");
+              imgdark.classList.remove("active")
+
+              const bodyelement = document.getElementById("body");
+              bodyelement.className = "theme-light";
+            }
+            </script>
+</body>
+</html>
